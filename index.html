@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+        integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="lib/dist/fullpage.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+        integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="lib/dist/fullpage.min.js"></script>
+
+    <script>
+        $(function () {
+            var myFullpage = new fullpage('#fullpage', {
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4rdPage'],
+                navigation: true,
+                navigationTooltips: ['Intro', 'About', 'Web Redesign', 'Graphic Design', 'Contact'],
+                navigationPosition: 'right',
+                showActiveTooltip: true,
+            });
+
+
+            var typingBool = false;
+            var typingIdx = 0;
+            var liIndex = 0;
+            var liLength = $(".typing-txt>ul>li").length;
+
+            // 타이핑될 텍스트를 가져온다 
+            var typingTxt = $(".typing-txt>ul>li").eq(liIndex).text();
+            typingTxt = typingTxt.split(""); // 한글자씩 자른다. 
+            if (typingBool == false) { // 타이핑이 진행되지 않았다면 
+                typingBool = true;
+                var tyInt = setInterval(typing, 100); // 반복동작 
+            }
+
+            function typing() {
+                if (typingIdx < typingTxt.length) { // 타이핑될 텍스트 길이만큼 반복 
+                    $(".typing").append(typingTxt[typingIdx]); // 한글자씩 이어준다. 
+                    typingIdx++;
+                } else { //한문장이끝나면
+                    //다음문장으로.. 마지막문장이면 다시 첫번째 문장으로 
+                    if (liIndex >= liLength - 1) {
+                        liIndex = 0;
+                    } else {
+                        liIndex++;
+                    }
+
+                    //다음문장을 타이핑하기위한 셋팅
+                    typingIdx = 0;
+                    typingBool = false;
+                    typingTxt = $(".typing-txt>ul>li").eq(liIndex).text();
+
+                    //다음문장 타이핑전 1초 쉰다
+                    clearInterval(tyInt);
+                    setTimeout(function () {
+                        $(".typing").html('');
+                        tyInt = setInterval(typing, 100);
+                    }, 1000);
+                }
+            }
+
+        })//jquery end
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <a href="#"><img src="img/logo.png" alt="로고"></a>
+            <ul>
+                <li><a href="#">Intro</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Web Redesign</a></li>
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div><!-- .inner end -->
+    </header>
+
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <span>Park Jaemin</span>
+            <div class="title">
+                <p>Web Design / Publising</p>
+                <img src="img/logo.png" alt="얼굴">
+                <h1 class="typing-demo">Portfolio</h1>
+                <strong>Hi, my name is Park Jaemin</strong>
+            </div><!-- .title end -->
+            <h4>ⓒ2023</h4>
+        </div><!-- section0 -->
+
+        <div class="section" id="section1">
+            <h2>Profile</h2>
+            <div class="about">
+                <img src="img/profile.png" alt="프로필사진">
+                <div class="text">
+                    <h3>About</h3>
+                    <ul>
+                        <li>
+                            <span>NAME</span>
+                            <span>박재민</span>
+                        </li>
+                        <li>
+                            <span>BIRTH</span>
+                            <span>1994.01.13</span>
+                        </li>
+                        <li>
+                            <span>PHONE</span>
+                            <span>010 2907 4113</span>
+                        </li>
+                        <li>
+                            <span>EMAIL</span>
+                            <span>lqrvzm87@naver.com</span>
+                        </li>
+                    </ul>
+                </div><!-- .text end -->
+            </div><!-- .about end -->
+
+            <div class="info">
+                <div class="certificate">
+                    <h3>CERTIFICATE</h3>
+                    <ul>
+                        <li>
+                            <span>2023.02</span>
+                            <span>중등학교 정교사(2급) 음악</span>
+                        </li>
+                        <li>
+                            <span>2014.10</span>
+                            <span>운전면허 1종 보통</span>
+                        </li>
+                    </ul>
+                </div><!-- .certificate end -->
+
+                <div class="education">
+                    <h3>EDUCATION</h3>
+                    <ul>
+                        <li>
+                            <span>2023.06 ~ 2023.11</span>
+                            <span>그린컴퓨터아카데미 UI/UX 반응형 웹디자인&웹퍼블리셔 양성과정 수료(예정)</span>
+                        </li>
+                        <li>
+                            <span>2023.02</span>
+                            <span>동아대학교 교육대학원 음악교육전공 졸업</span>
+                        </li>
+                        <li>
+                            <span>2020.08</span>
+                            <span>동아대학교 실용음악학과 졸업</span>
+                        </li>
+                    </ul>
+                </div><!-- .education end -->
+
+                <div class="tools">
+                    <h3>TOOLS</h3>
+                    <div>
+                        <img src="img/html.png" alt="html">
+                        <img src="img/css.png" alt="css">
+                        <img src="img/js.png" alt="js">
+                        <img src="img/jquery.png" alt="jquery">
+                        <img src="img/photoshop.png" alt="photoshop">
+                        <img src="img/illustrator.png" alt="illustrator">
+                        <img src="img/figma.png" alt="figma">
+                        <img src="img/github.png" alt="gitghub">
+                        <img src="img/finalcut.png" alt="finalcut">
+                    </div>
+                </div><!-- .tools end -->
+            </div><!-- .info end -->
+
+        </div><!-- section1 -->
+
+        <div class="section" id="section2">
+            <h2>Web</h2>
+            <div class="cont cont1">
+                <img src="img/seoul.png" alt="예술의전당목업">
+                <div class="info_text">
+                    <h4>예술의전당</h4>
+
+                    <ul>
+                        <li>
+                            <span>TYPE</span>
+                            <span>Fullpage / Reponsive Web</span>
+                        </li>
+                        <li>
+                            <span>PAGE</span>
+                            <span>Main page</span>
+                        </li>
+                        <li>
+                            <span>TOOL</span>
+                            <span>HTML, CSS, Jquery, Javascript, Photoshop, vscode</span>
+                        </li>
+                        <li>
+                            <span>참여도</span>
+                            <span>100% (개인 작업)</span>
+                        </li>
+                    </ul>
+
+                    <div class="btn">
+                        <a href="#">STYLEGUIDE</a>
+                        <a href="#">WEBSITE</a>
+                    </div><!-- .btn end -->
+                </div><!-- .info_text end -->
+            </div><!-- .cont end -->
+            <div class="cont cont2">
+                <img src="img/smith.png" alt="예술의전당목업">
+                <div class="info_text">
+                    <h4>스미스티</h4>
+                    <ul>
+                        <li>
+                            <span>TYPE</span>
+                            <span>Website</span>
+                        </li>
+                        <li>
+                            <span>PAGE</span>
+                            <span>Main page</span>
+                        </li>
+                        <li>
+                            <span>TOOL</span>
+                            <span>HTML, CSS, Jquery, Javascript, Figma</span>
+                        </li>
+                        <li>
+                            <span>참여도</span>
+                            <span>100% (개인 작업)</span>
+                        </li>
+                    </ul>
+
+                    <div class="btn">
+                        <a href="#">WEBSITE</a>
+                    </div><!-- .btn end -->
+                </div><!-- .info_text end -->
+            </div><!-- .cont end -->
+            <div class="cont cont3">
+                <img src="img/m.png" alt="예술의전당목업">
+                <div class="info_text">
+                    <h4>마녀공장</h4>
+
+                    <ul>
+                        <li>
+                            <span>TYPE</span>
+                            <span>Responsive Web</span>
+                        </li>
+                        <li>
+                            <span>PAGE</span>
+                            <span>Main page</span>
+                        </li>
+                        <li>
+                            <span>TOOL</span>
+                            <span>HTML, CSS, Jquery, Javascript, Figma</span>
+                        </li>
+                        <li>
+                            <span>참여도</span>
+                            <span>100% (개인 작업)</span>
+                        </li>
+                    </ul>
+
+                    <div class="btn">
+                        <a href="#">WEBSITE</a>
+                    </div><!-- .btn end -->
+                </div><!-- .info_text end -->
+            </div><!-- .cont end -->
+            <div class="cont cont4">
+                <img src="img/b.png" alt="예술의전당목업">
+                <div class="info_text">
+                    <h4>빙그레</h4>
+
+                    <ul>
+                        <li>
+                            <span>TYPE</span>
+                            <span>Website</span>
+                        </li>
+                        <li>
+                            <span>PAGE</span>
+                            <span>Main page</span>
+                        </li>
+                        <li>
+                            <span>TOOL</span>
+                            <span>HTML, CSS, Jquery, Javascript, Figma</span>
+                        </li>
+                        <li>
+                            <span>참여도</span>
+                            <span>100% (개인 작업)</span>
+                        </li>
+                    </ul>
+
+                    <div class="btn">
+                        <a href="#">STYLEGUIDE</a>
+                        <a href="#">WEBSITE</a>
+                    </div><!-- .btn end -->
+                </div><!-- .info_text end -->
+            </div><!-- .cont end -->
+            <div class="cont cont5">
+                <img src="img/w.png" alt="예술의전당목업">
+                <div class="info_text">
+                    <h4>위드굿즈</h4>
+
+                    <ul>
+                        <li>
+                            <span>TYPE</span>
+                            <span>Website</span>
+                        </li>
+                        <li>
+                            <span>PAGE</span>
+                            <span>Main page</span>
+                        </li>
+                        <li>
+                            <span>TOOL</span>
+                            <span>HTML, CSS</span>
+                        </li>
+                        <li>
+                            <span>참여도</span>
+                            <span>100% (개인 작업)</span>
+                        </li>
+                    </ul>
+
+                    <div class="btn">
+                        <a href="#">WEBSITE</a>
+                    </div><!-- .btn end -->
+                </div><!-- .info_text end -->
+            </div><!-- .cont end -->
+        </div><!-- section2 -->
+
+        <div class="section" id="section3">
+            <h2>Design</h2>
+            <div class="list">
+                <a href="img/1.png" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                    <img src="img/1.png" />
+                </a>
+                <a href="img/2.png" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                    <img src="img/2.png" />
+                </a>
+                <a href="img/3.png" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                    <img src="img/3.png" />
+                </a>
+                <a href="img/4.png" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                    <img src="img/4.png" />
+                </a>
+                <a href="img/5.jpg" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                    <img src="img/5.jpg" />
+                </a>
+                <a href="img/6.jpg" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                    <img src="img/6.jpg" />
+                </a>
+                <a href="img/7.jpg" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                    <img src="img/7.jpg" />
+                </a>
+                <a href="img/8.jpg" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                    <img src="img/8.jpg" />
+                </a>
+                <a href="img/9.jpg" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                    <img src="img/9.jpg" />
+                </a>
+                <a href="img/10.jpg" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                    <img src="img/10.jpg" />
+                </a>
+                <a href="img/11.jpg" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                    <img src="img/11.jpg" />
+                </a>
+                <a href="img/12.jpg" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                    <img src="img/12.jpg" />
+                </a>
+                <a href="img/13.jpg" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                    <img src="img/13.jpg" />
+                </a>
+                <a href="img/14.jpg" data-fancybox="images" data-caption="Backpackers following a dirt trail">
+                    <img src="img/14.jpg" />
+                </a>
+            </div>
+            </p>
+        </div><!-- section3 -->
+
+        <footer class="section" id="footer">
+            <h2>Contact</h2>
+            <div class="typing-txt">
+                <ul>
+                    <li>감사합니다.</li>
+                    <li>신입 웹퍼블리셔 박재민입니다.</li>
+                    <li>Phone : 010 2907 4113</li>
+                    <li>E-mail : lqrvzm87@gmail.com</li>
+                </ul>
+
+            </div>
+            <p class="typing"></p>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
