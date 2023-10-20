@@ -794,7 +794,7 @@ header .inner ul li {
   margin: 200px 200px 100px;
 }
 #section3 a img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 #section3 a img {
   width: 100%;
