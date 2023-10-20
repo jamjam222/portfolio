@@ -37,6 +37,7 @@
             var liIndex = 0;
             var liLength = $(".typing-txt>ul>li").length;
 
+
             var typingTxt = $(".typing-txt>ul>li").eq(liIndex).text();
             typingTxt = typingTxt.split("");
             if (typingBool == false) {
@@ -48,15 +49,18 @@
                 if (typingIdx < typingTxt.length) {
                     $(".typing").append(typingTxt[typingIdx]);
                     typingIdx++;
+                } else {
                     if (liIndex >= liLength - 1) {
                         liIndex = 0;
                     } else {
                         liIndex++;
                     }
 
+
                     typingIdx = 0;
                     typingBool = false;
                     typingTxt = $(".typing-txt>ul>li").eq(liIndex).text();
+
 
                     clearInterval(tyInt);
                     setTimeout(function () {
@@ -218,8 +222,8 @@
             </div><!-- .cont end -->
             <div class="cont cont2">
                 <div class="mockupimg">
-                    <p>스크린에 마우스를 올려보세요 !</p>
                     <span></span>
+                    <p>스크린에 마우스를 올려보세요 !</p>
                 </div><!-- .mockupimg end -->
                 <div class="mobile_mockup">
                     <span class="scroll"></span>
@@ -238,7 +242,7 @@
                         </li>
                         <li>
                             <span>TOOL</span>
-                            <span>HTML, CSS, Jquery, Figma</span>
+                            <span>HTML, CSS, Jquery, Javascript, Figma</span>
                         </li>
                         <li>
                             <span>참여도</span>
@@ -275,7 +279,7 @@
                         </li>
                         <li>
                             <span>TOOL</span>
-                            <span>HTML, CSS, Jquery, Figma</span>
+                            <span>HTML, CSS, Jquery, Javascript, Figma</span>
                         </li>
                         <li>
                             <span>참여도</span>
@@ -307,7 +311,7 @@
                         </li>
                         <li>
                             <span>TOOL</span>
-                            <span>HTML, CSS, Jquery, Figma, Photoshop</span>
+                            <span>HTML, CSS, Jquery, Javascript, Figma</span>
                         </li>
                         <li>
                             <span>참여도</span>
