@@ -562,7 +562,13 @@ header .inner ul li {
   left: 72px;
 }
 
-
+#section2 .cont .mockupimg p {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 300;
+}
 #section2 .cont2 .mobile_mockup {
   background: url(../img/smith_mobile.png) no-repeat;
   width: 216px;
@@ -634,7 +640,6 @@ header .inner ul li {
     background-position: 0 0;
   }
 }
-
 
 #section2 .cont3 .mobile_mockup {
   background: url(../img/manyo_mobile.png) no-repeat;
