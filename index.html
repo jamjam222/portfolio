@@ -22,10 +22,20 @@
 
     <script>
         $(function () {
+
+            $("#section1 .info .tools div img").mouseenter(
+                function () {
+                    $("#section1 .info .text").removeClass("on");
+                    $("#section1 .info .text")
+                        .eq($(this).index())
+                        .addClass("on");
+                }
+            );
+
             var myFullpage = new fullpage('#fullpage', {
                 anchors: ['firstPage', 'secondPage', '3rdPage', '4rdPage', '5rdPage'],
                 navigation: true,
-                navigationTooltips: ['Intro', 'About', 'Web Redesign', 'Graphic Design', 'Contact'],
+                navigationTooltips: ['Intro', 'About', 'Web Design', 'Graphic Design', 'Contact'],
                 navigationPosition: 'right',
                 showActiveTooltip: true,
             });
@@ -81,7 +91,7 @@
             <ul>
                 <li><a href="#firstPage">Intro</a></li>
                 <li><a href="#secondPage">About</a></li>
-                <li><a href="#3rdPage">Web Redesign</a></li>
+                <li><a href="#3rdPage">Web Design</a></li>
                 <li><a href="#4rdPage">Graphic Design</a></li>
                 <li><a href="#5rdPage">Contact</a></li>
             </ul>
@@ -175,6 +185,61 @@
                         <img src="img/finalcut.png" alt="finalcut">
                     </div>
                 </div><!-- .tools end -->
+                <div class="text">
+                    <p>
+                        웹/태블릿/모바일 등 다양한 디바이스 환경을 고려한 레이아웃 구성 위치 설정 및 디자인, 코드 작성이 가능합니다.
+                    </p>
+                </div>
+                <!-- text end -->
+
+                <div class="text">
+                    <p>
+                        HTML을 이용하여 마크업한 문서의 레이아웃과 스타일 정의가 가능합니다.
+                    </p>
+                </div>
+                <!-- text end -->
+
+                <div class="text">
+                    <p>
+                        클릭 및 스크롤 등의 브라우저 동작을 위한 코드 작성이 가능합니다.
+                    </p>
+                </div>
+                <!-- text end -->
+
+                <div class="text">
+                    <p>
+                        그리드를 사용해 균형감 있는 웹사이트 시안을 제작할 수 있습니다.
+                    </p>
+                </div>
+                <!-- text end -->
+
+                <div class="text">
+                    <p>
+                        펜툴을 이용한 심벌 디자인 및 도안 작업이 가능합니다.
+                    </p>
+                </div>
+                <!-- text end -->
+
+                <div class="text">
+                    <p>이미지 슬라이더 등과 같은 동적인 웹사이트에 필요한 효과를 구현할 수 있습니다.</p>
+                </div>
+                <!-- text end -->
+                <div class="text">
+                    <p>다양한 디바이스 환경에 맞춘 UI/UV 프로토 타입 제작이 가능합니다.</p>
+                </div>
+                <!-- text end -->
+                <div class="text">
+                    <p></p>
+                </div>
+                <!-- text end -->
+                <div class="text">
+                    <p></p>
+                </div>
+                <!-- text end -->
+                <div class="text">
+                    <p>컷편집 및 효과를 넣어 동영상 제작이 가능합니다.</p>
+                </div>
+                <!-- text end -->
             </div><!-- .info end -->
 
         </div><!-- section1 -->
@@ -185,7 +250,7 @@
             <div class="cont cont1">
                 <div class="mockupimg">
                     <span></span>
-                    <p>스크린에 마우스를 올려보세요 !</p>
+                    <p>스크린에 마우스를 올려보세요!</p>
                 </div><!-- .mockupimg end -->
                 <div class="mobile_mockup">
                     <span class="scroll"></span>
@@ -206,11 +271,11 @@
                         </li>
                         <li>
                             <span>TOOL</span>
-                            <span>HTML, CSS, Jquery, Javascript, Photoshop, vscode</span>
+                            <span>HTML, CSS, JQuery, Javascript, Photoshop, vscode</span>
                         </li>
                         <li>
                             <span>참여도</span>
-                            <span>100% (개인 작업)</span>
+                            <span>디자인, 퍼블리싱 100%</span>
                         </li>
                     </ul>
 
@@ -223,7 +288,7 @@
             <div class="cont cont2">
                 <div class="mockupimg">
                     <span></span>
-                    <p>스크린에 마우스를 올려보세요 !</p>
+                    <p>스크린에 마우스를 올려보세요!</p>
                 </div><!-- .mockupimg end -->
                 <div class="mobile_mockup">
                     <span class="scroll"></span>
@@ -242,11 +307,11 @@
                         </li>
                         <li>
                             <span>TOOL</span>
-                            <span>HTML, CSS, Jquery, Figma</span>
+                            <span>HTML, CSS, JQuery, vscode</span>
                         </li>
                         <li>
                             <span>참여도</span>
-                            <span>100% (개인 작업)</span>
+                            <span>퍼블리싱 100%</span>
                         </li>
                     </ul>
 
@@ -259,7 +324,7 @@
 
                 <div class="mockupimg">
                     <span></span>
-                    <p>스크린에 마우스를 올려보세요 !</p>
+                    <p>스크린에 마우스를 올려보세요!</p>
                 </div><!-- .mockupimg end -->
                 <div class="mobile_mockup">
                     <span class="scroll"></span>
@@ -279,11 +344,11 @@
                         </li>
                         <li>
                             <span>TOOL</span>
-                            <span>HTML, CSS, Jquery, Figma</span>
+                            <span>HTML, CSS, JQuery, vscode</span>
                         </li>
                         <li>
                             <span>참여도</span>
-                            <span>100% (개인 작업)</span>
+                            <span>퍼블리싱 100%</span>
                         </li>
                     </ul>
 
@@ -295,7 +360,7 @@
             <div class="cont cont4">
                 <div class="mockupimg">
                     <span></span>
-                    <p>스크린에 마우스를 올려보세요 !</p>
+                    <p>스크린에 마우스를 올려보세요!</p>
                 </div><!-- .mockupimg end -->
                 <div class="info_text">
                     <h4>빙그레</h4>
@@ -311,11 +376,11 @@
                         </li>
                         <li>
                             <span>TOOL</span>
-                            <span>HTML, CSS, Jquery, Figma</span>
+                            <span>HTML, CSS, JQuery, Photoshop, vscode</span>
                         </li>
                         <li>
                             <span>참여도</span>
-                            <span>100% (개인 작업)</span>
+                            <span>디자인, 퍼블리싱 100%</span>
                         </li>
                     </ul>
 
@@ -328,7 +393,7 @@
             <div class="cont cont5">
                 <div class="mockupimg">
                     <span></span>
-                    <p>스크린에 마우스를 올려보세요 !</p>
+                    <p>스크린에 마우스를 올려보세요!</p>
                 </div><!-- .mockupimg end -->
                 <div class="info_text">
                     <h4>위드굿즈</h4>
@@ -344,11 +409,11 @@
                         </li>
                         <li>
                             <span>TOOL</span>
-                            <span>HTML, CSS, jquery, Figma</span>
+                            <span>HTML, CSS, jQuery, vscode</span>
                         </li>
                         <li>
                             <span>참여도</span>
-                            <span>100% (개인 작업)</span>
+                            <span>디자인 50%, 퍼블리싱 100%</span>
                         </li>
                     </ul>
 
@@ -363,6 +428,8 @@
         <div class="section" id="section3">
             <h2>Design</h2>
             <div class="list">
+                <p>Photoshop & Illustrator로 디자인한 작업물입니다.<br>
+                    (클릭시 이미지가 확대됩니다.)</p>
                 <a href="img/1.png" data-fancybox="images" data-caption="">
                     <img src="img/1.png" />
                 </a>
@@ -409,7 +476,7 @@
             </p>
         </div><!-- section3 -->
 
-        <footer class="section" id="footer">
+        <div class="section" id="section4">
             <h2>Contact</h2>
             <div class="typing-txt">
                 <ul>
@@ -421,9 +488,19 @@
 
             </div>
             <p class="typing"></p>
-
+        </div>
+        <footer class="section fp-auto-height">
+            <div class="inner">
+                <div class="text">
+                    <p>본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
+                    <span> © 2023 Park Jaemin. All Rights Reserved. </span>
+                </div><!-- .text end -->
+                <div class="link">
+                    <a href="https://github.com/jamjam222" target="_blank">github</a>
+                    <a href="img/프로세스페이지/웹디자인&퍼블리셔 박재민 입사지원서.pdf" target="_blank">resume</a>
+                </div><!-- .link end -->
+            </div><!-- .inner end -->
         </footer>
-
     </div>
 
 </body>

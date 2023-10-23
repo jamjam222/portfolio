@@ -71,6 +71,7 @@ body {
   overflow: hidden;
   border-right: 3px solid;
   margin: 0 auto;
+  position: relative;
 }
 
 @keyframes typing {
@@ -159,27 +160,28 @@ header .inner ul li {
   display: block;
   background-color: #333;
 }
-
 #section0 .title h1 {
   font-size: 300px;
   font-weight: bold;
-  position: relative;
+  width: 1250px;
+  height: 250px;
+  line-height: 250px;
 }
 
 #section0 .title {
+  margin: 0 auto;
   text-align: center;
   font-size: 18px;
+  max-width: 1220px;
+  width: calc(100% - 230px);
 }
 
 #section0 .title p {
-  position: absolute;
-  top: 335px;
-  left: 373px;
+  text-align: start;
 }
 #section0 .title strong {
-  position: absolute;
-  right: 375px;
-  bottom: 335px;
+  display: block;
+  text-align: end;
 }
 
 #section0 div img {
@@ -188,8 +190,8 @@ header .inner ul li {
   object-fit: cover;
   position: absolute;
   z-index: 9;
-  left: 526px;
-  top: 400px;
+  left: 28.1%;
+  top: 42%;
 }
 
 #section0 span {
@@ -203,7 +205,7 @@ header .inner ul li {
 #section0 h4 {
   position: absolute;
   bottom: 50px;
-  right: 100px;
+  right: 5%;
 }
 
 /* #section1 */
@@ -235,7 +237,7 @@ header .inner ul li {
   justify-content: center;
 }
 #section1 .fp-overflow .info {
-  margin-left: 250px;
+  margin-left: 17.36%;
 }
 
 #section1 .about img {
@@ -289,6 +291,9 @@ header .inner ul li {
   font-weight: bold;
   margin-bottom: 20px;
 }
+#section1 .info {
+  position: relative;
+}
 #section1 .info h3 {
   display: inline-block;
   position: relative;
@@ -320,7 +325,20 @@ header .inner ul li {
 #section1 .info ul li span:last-child {
   font-family: "Pretendard";
 }
-
+#section1 .tools::before {
+  content: "아이콘에 마우스를 올려보세요!";
+  position: absolute;
+  top: 4px;
+  left: 11%;
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+}
+#section1 .tools {
+  margin-bottom: 30px;
+  position: relative;
+}
 #section1 .tools div img {
   margin-right: 10px;
   vertical-align: middle;
@@ -349,6 +367,17 @@ header .inner ul li {
   height: 45px;
 }
 
+/* img hover */
+#section1 .info .text {
+  display: none;
+}
+#section1 .info .text.on {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 16px;
+}
 /* #section2 */
 #section2 h2 {
   right: -30px;
@@ -364,7 +393,7 @@ header .inner ul li {
 #section2 .cont {
   display: flex;
   justify-content: center;
-  margin: 150px 0 300px;
+  margin: 200px 0 300px;
   align-items: center;
 
   animation: item 1s 0.7s both;
@@ -551,7 +580,6 @@ header .inner ul li {
   width: 800px;
   height: 650px;
   position: relative;
-  transform: translate(0px, 0px);
 }
 #section2 .cont1 .mockupimg span {
   background: url("../img/Group\ 1.png") no-repeat;
@@ -568,6 +596,7 @@ header .inner ul li {
   left: 50%;
   transform: translateX(-50%);
   font-weight: 300;
+  color: #666;
 }
 #section2 .cont2 .mobile_mockup {
   background: url(../img/smith_mobile.png) no-repeat;
@@ -781,28 +810,43 @@ header .inner ul li {
   top: -90px;
 }
 #section3 .fp-overflow a {
-  width: 300px;
+  width: calc(100% / 4 - 80px);
   margin: 20px;
   display: block;
   overflow: hidden;
+}
+#section3 p {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 300;
+  color: #666;
+  text-align: center;
+  line-height: 1.3;
 }
 
 #section3 .list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 200px 200px 100px;
+  margin: 300px 200px 100px;
+  position: relative;
 }
 #section3 a img:hover {
   transform: scale(1.05);
+}
+#section3 a {
+  border-radius: 20px;
 }
 #section3 a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: .5s;
+  transition: 0.5s;
+  border-radius: 20px;
 }
-#section3 .fp-overflow a:nth-child(n + 5):nth-child(-n + 12) {
+#section3 .fp-overflow a:nth-child(n + 6):nth-child(-n + 12) {
   height: 300px;
 }
 
@@ -841,4 +885,42 @@ header .inner ul li {
   100% {
     border-right: 1px solid #fff;
   }
+}
+#fp-nav ul li .fp-tooltip {
+  color: #333;
+}
+footer .inner {
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: #666;
+}
+#fp-nav li:last-child {
+  display: none;
+}
+footer .inner .link {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+}
+footer .inner .link a {
+  display: block;
+  border: 1px solid #333;
+  border-radius: 20px;
+  width: 90px;
+  height: 35px;
+  line-height: 34px;
+  color: #333;
+  margin-right: 20px;
+  transition: .3s;
+}
+
+footer .inner .link a:hover {
+  color: #fff;
+  background-color: #333;
 }
