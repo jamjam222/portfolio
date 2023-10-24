@@ -814,10 +814,11 @@ header .inner ul li {
   margin: 20px;
   display: block;
   overflow: hidden;
+  position: relative;
 }
 #section3 p {
   position: absolute;
-  top: -30px;
+  top: -35px;
   left: 50%;
   transform: translateX(-50%);
   font-weight: 300;
@@ -833,18 +834,59 @@ header .inner ul li {
   margin: 300px 200px 100px;
   position: relative;
 }
-#section3 a img:hover {
+
+#section3 a:hover {
   transform: scale(1.05);
+  transition: .3s;
 }
 #section3 a {
-  border-radius: 20px;
+  border-radius: 10px;
 }
+#section3 a::before {
+  content: "";
+  display: block;
+  background-image: url(../img/photoshop.png);
+  background-size: 48px 48px;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.7;
+}
+
+#section3 .fp-overflow a:nth-child(-n + 3):before {
+  content: "";
+  display: block;
+  background-image: url(../img/illustrator.png);
+  background-size: 48px 48px;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.7;
+}
+
+#section3 .fp-overflow a:nth-child(5):before {
+  content: "";
+  display: block;
+  background-image: url(../img/illustrator.png);
+  background-size: 48px 48px;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.7;
+}
+
 #section3 a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 0.5s;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 #section3 .fp-overflow a:nth-child(n + 6):nth-child(-n + 12) {
   height: 300px;
@@ -852,7 +894,7 @@ header .inner ul li {
 
 #section3 .fp-overflow a:nth-last-child(-n + 2) {
   width: inherit;
-  height: 321px;
+  height: 318px;
 }
 /*  */
 .typing-txt {
@@ -905,27 +947,55 @@ footer .inner .link {
   display: flex;
   position: absolute;
   top: 50%;
-  right: 20%;
+  right: 25%;
   transform: translateY(-50%);
 }
 footer .inner .link a {
-  display: block;
-  border: 1px solid #333;
+  display: inline-block;
+  border: 2px solid #333;
   border-radius: 20px;
-  width: 90px;
-  height: 35px;
+  /* width: 90px; */
+  /* height: 35px; */
   line-height: 34px;
   color: #333;
   margin-right: 20px;
   transition: 0.3s;
+  position: relative;
+  font-weight: bold;
+  padding: 0 20px;
 }
-
+footer .inner .link a::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../img/cursor.png);
+  background-size: 32px 32px;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin-right: 20px;
+  position: absolute;
+  bottom: -8px;
+  right: -31px;
+}
+footer .inner .link a:last-child::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../img/cursor2.png);
+  background-size: 32px 32px;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin-right: 20px;
+  position: absolute;
+  bottom: -8px;
+  right: -31px;
+}
 footer .inner .link a:hover {
   color: #fff;
   background-color: #333;
 }
 #section4 .arrow::before {
-  content: 'Scroll';
+  content: "Scroll";
   position: absolute;
   top: -12px;
   left: -24px;
@@ -956,4 +1026,7 @@ footer .inner .link a:hover {
   100% {
     transform: translateY(0) rotate(45deg);
   }
+}
+footer .inner .text {
+  font-size: 14px;
 }
