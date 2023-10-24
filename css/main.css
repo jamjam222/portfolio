@@ -917,10 +917,43 @@ footer .inner .link a {
   line-height: 34px;
   color: #333;
   margin-right: 20px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 footer .inner .link a:hover {
   color: #fff;
   background-color: #333;
+}
+#section4 .arrow::before {
+  content: 'Scroll';
+  position: absolute;
+  top: -12px;
+  left: -24px;
+  display: block;
+  transform: rotate(-45deg);
+}
+
+#section4 .arrow {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-right: 2px solid #666;
+  border-bottom: 2px solid #666;
+  transform: rotate(45deg);
+  animation: _upDownArrow 1s ease-in-out infinite;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@keyframes _upDownArrow {
+  0% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
 }
