@@ -65,26 +65,10 @@ body {
 }
 
 .typing-demo {
-  width: 7ch;
-  animation: typing 1.2s steps(9), blink 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
   margin: 0 auto;
   position: relative;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 h2 {
   font-size: 500px;
   color: #f3f3f3;
@@ -125,7 +109,7 @@ header .inner > a img {
   object-fit: cover;
   position: absolute;
   top: 50%;
-  left: 100px;
+  left: 101px;
   transform: translateY(-50%);
 
   display: none;
@@ -164,8 +148,6 @@ header .inner ul li {
   font-size: 300px;
   font-weight: bold;
   width: 1250px;
-  height: 250px;
-  line-height: 250px;
 }
 
 #section0 .title {
@@ -174,14 +156,21 @@ header .inner ul li {
   font-size: 18px;
   max-width: 1220px;
   width: calc(100% - 230px);
+  position: relative;
 }
 
 #section0 .title p {
   text-align: start;
+  position: absolute;
+  top: 7%;
+  left: 3%;
 }
 #section0 .title strong {
   display: block;
   text-align: end;
+  position: absolute;
+  bottom: 7%;
+  right: 1%;
 }
 
 #section0 div img {
@@ -190,8 +179,8 @@ header .inner ul li {
   object-fit: cover;
   position: absolute;
   z-index: 9;
-  left: 28.1%;
-  top: 42%;
+  left: 16%;
+  top: 28%;
 }
 
 #section0 span {
@@ -837,7 +826,7 @@ header .inner ul li {
 
 #section3 a:hover {
   transform: scale(1.05);
-  transition: .3s;
+  transition: 0.3s;
 }
 #section3 a {
   border-radius: 10px;
@@ -1029,4 +1018,34 @@ footer .inner .link a:hover {
 }
 footer .inner .text {
   font-size: 14px;
+}
+
+.fp-viewing-3rdPage header img {
+  display: block !important;
+}
+.fp-viewing-4rdPage header img {
+  display: block !important;
+}
+.fp-viewing-5rdPage header img {
+  display: block !important;
+}
+.fp-viewing-5 header img {
+  display: block !important;
+}
+a.effect-shine{
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.9) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 3s infinite;
+}
+a.effect-shine{
+  cursor: default;
+}
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
 }

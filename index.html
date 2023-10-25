@@ -21,16 +21,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        $(function () {
 
-            $("#section1 .info .tools div img").mouseenter(
-                function () {
-                    $("#section1 .info .text").removeClass("on");
-                    $("#section1 .info .text")
-                        .eq($(this).index())
-                        .addClass("on");
-                }
-            );
+        $(function () {
 
             var myFullpage = new fullpage('#fullpage', {
                 anchors: ['firstPage', 'secondPage', '3rdPage', '4rdPage', '5rdPage'],
@@ -40,7 +32,14 @@
                 showActiveTooltip: true,
             });
 
-
+            $("#section1 .info .tools div img").mouseenter(
+                function () {
+                    $("#section1 .info .text").removeClass("on");
+                    $("#section1 .info .text")
+                        .eq($(this).index())
+                        .addClass("on");
+                }
+            );
 
             var typingBool = false;
             var typingIdx = 0;
@@ -79,7 +78,6 @@
                     }, 1000);
                 }
             }
-
         })//jquery end
     </script>
 </head>
@@ -104,7 +102,7 @@
             <div class="title">
                 <p>Web Design / Publising</p>
                 <img src="img/logo.png" alt="얼굴">
-                <h1 class="typing-demo">Portfolio</h1>
+                <h1><a href="#" class="effect-shine">Portfolio</a></h1>
                 <strong>Hi, my name is Park Jaemin</strong>
             </div><!-- .title end -->
             <h4>ⓒ2023</h4>
@@ -430,46 +428,46 @@
             <div class="list">
                 <p>Photoshop & Illustrator로 디자인한 작업물입니다.<br>
                     (클릭시 이미지가 확대됩니다.)</p>
-                <a href="img/1.png" data-fancybox="images" data-caption="">
+                <a href="img/1.png" data-fancybox="images" data-caption="illustrator">
                     <img src="img/1.png" />
                 </a>
-                <a href="img/2.png" data-fancybox="images" data-caption="">
+                <a href="img/2.png" data-fancybox="images" data-caption="illustrator">
                     <img src="img/2.png" />
                 </a>
-                <a href="img/3.png" data-fancybox="images" data-caption="">
+                <a href="img/3.png" data-fancybox="images" data-caption="photoshop">
                     <img src="img/3.png" />
                 </a>
-                <a href="img/4.png" data-fancybox="images" data-caption="">
+                <a href="img/4.png" data-fancybox="images" data-caption="illustrator">
                     <img src="img/4.png" />
                 </a>
-                <a href="img/5.jpg" data-fancybox="images" data-caption="">
+                <a href="img/5.jpg" data-fancybox="images" data-caption="photoshop">
                     <img src="img/5.jpg" />
                 </a>
-                <a href="img/6.jpg" data-fancybox="images" data-caption="">
+                <a href="img/6.jpg" data-fancybox="images" data-caption="photoshop">
                     <img src="img/6.jpg" />
                 </a>
-                <a href="img/7.jpg" data-fancybox="images" data-caption="">
+                <a href="img/7.jpg" data-fancybox="images" data-caption="photoshop">
                     <img src="img/7.jpg" />
                 </a>
-                <a href="img/8.jpg" data-fancybox="images" data-caption="">
+                <a href="img/8.jpg" data-fancybox="images" data-caption="photoshop">
                     <img src="img/8.jpg" />
                 </a>
-                <a href="img/9.jpg" data-fancybox="images" data-caption="">
+                <a href="img/9.jpg" data-fancybox="images" data-caption="photoshop">
                     <img src="img/9.jpg" />
                 </a>
-                <a href="img/10.jpg" data-fancybox="images" data-caption="">
+                <a href="img/10.jpg" data-fancybox="images" data-caption="photoshop">
                     <img src="img/10.jpg" />
                 </a>
-                <a href="img/11.jpg" data-fancybox="images" data-caption="">
+                <a href="img/11.jpg" data-fancybox="images" data-caption="photoshop">
                     <img src="img/11.jpg" />
                 </a>
-                <a href="img/12.jpg" data-fancybox="images" data-caption="">
+                <a href="img/12.jpg" data-fancybox="images" data-caption="photoshop">
                     <img src="img/12.jpg" />
                 </a>
-                <a href="img/13.jpg" data-fancybox="images" data-caption="">
+                <a href="img/13.jpg" data-fancybox="images" data-caption="photoshop">
                     <img src="img/13.jpg" />
                 </a>
-                <a href="img/14.jpg" data-fancybox="images" data-caption="">
+                <a href="img/14.jpg" data-fancybox="images" data-caption="photoshop">
                     <img src="img/14.jpg" />
                 </a>
             </div>
