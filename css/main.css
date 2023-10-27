@@ -506,6 +506,17 @@ header .inner ul li {
   background-color: #3085c3;
   color: #fff;
 }
+#section2 .cont6 .info_text h4::before {
+  background-color: #8ecddd;
+}
+#section2 .cont6 .info_text a:nth-child(2) {
+  border: 2px solid #8ecddd;
+  transition: 0.3s;
+}
+#section2 .cont6 .info_text a:nth-child(2):hover {
+  background-color: #8ecddd;
+  color: #fff;
+}
 
 #section2 .cont1 .mobile_mockup {
   background: url(../img/seoul_mobile.png) no-repeat;
@@ -565,7 +576,7 @@ header .inner ul li {
 }
 
 #section2 .cont1 .mockupimg {
-  background: url(../img/seoul.png) no-repeat;
+  background: url(../img/seoul1.png) no-repeat;
   width: 800px;
   height: 650px;
   position: relative;
@@ -792,6 +803,13 @@ header .inner ul li {
   }
 }
 
+#section2 .cont6 .mockupimg {
+  background: url(../img/react.png) no-repeat;
+  width: 800px;
+  height: 650px;
+  position: relative;
+  transform: translate(0px, 0px);
+}
 /* #section3 */
 
 #section3 h2 {
